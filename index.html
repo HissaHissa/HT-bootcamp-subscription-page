@@ -335,12 +335,97 @@
       line-height: 1.3;
     }
 
+    .world-section {
+      background:
+        linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.45)),
+        url('./recruiting-top.jpg') center/cover no-repeat;
+      padding: 70px 30px;
+      border-radius: 20px;
+      text-align: center;
+      margin: 40px 0;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    }
+
+    .world-section h2 {
+      color: var(--text);
+      font-size: clamp(1.6rem, 2vw + 1rem, 2.4rem);
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
     .ht-logo {
       height: 44px;
       width: auto;
       display: block;
     }
 
+    .instructor-section {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 24px;
+      background: linear-gradient(
+        145deg,
+        rgba(15, 23, 42, 0.96),
+        rgba(15, 23, 42, 0.90)
+      );
+      border-radius: 20px;
+      border: 1px solid rgba(148,163,184,0.25);
+      padding: 28px;
+      margin: 40px 0;
+      align-items: center;
+    }
+
+    .instructor-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .instructor-summary {
+      color: var(--muted);
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .linkedin-link {
+      color: var(--accent);
+      font-size: 0.9rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .linkedin-link:hover {
+      text-decoration: underline;
+    }
+
+    .instructor-photo-wrapper {
+      text-align: right;
+    }
+
+    .instructor-photo {
+      width: 100%;
+      max-width: 260px;
+      border-radius: 16px;
+      border: 1px solid rgba(148,163,184,0.3);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+      object-fit: cover;
+    }
+
+    /* Mobile */
+    @media (max-width: 780px) {
+      .instructor-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .instructor-photo-wrapper {
+        text-align: center;
+      }
+
+      .instructor-photo {
+        max-width: 200px;
+      }
+    }
 
 
     footer {
@@ -477,13 +562,49 @@
         <h2>Aprender tecnologia é expandir o seu universo.</h2>
       </section>
 
+      <section class="instructor-section">
+        <div class="instructor-content">
+          <h3>Sobre o Instrutor</h3>
+          <p class="instructor-summary">
+            Brendan O’Hara é um líder de tecnologia com mais de 25 anos de experiência em engenharia, 
+            inovação e inteligência artificial. Atuou como CEO e CTO em múltiplas startups e liderou 
+            projetos globais de P&D na Yamaha Music, trazendo uma combinação rara de visão estratégica e execução hands-on.
+          </p>
+
+          <p class="instructor-summary">
+            Viveu em 8 países, trabalhou com equipes distribuídas e fundou empresas em diferentes mercados, 
+            além de colaborar ativamente com a comunidade EmberJS e atuar como mentor no Founder Institute.
+          </p>
+
+          <p class="instructor-summary">
+            Especialista em GenAI, NLP, RAG e plataformas cloud, Brendan é reconhecido por formar equipes 
+            de alta performance, orientar founders e traduzir complexidade técnica em clareza executiva. 
+            Mestre em negócios pela London Business School, ele une tecnologia, produto e liderança para 
+            impulsionar inovação de forma prática e acessível.
+          </p>
+
+          <a href="https://www.linkedin.com/in/bohara/" 
+            target="_blank" 
+            class="linkedin-link">
+            → Ver perfil completo no LinkedIn
+          </a>
+        </div>
+
+        <div class="instructor-photo-wrapper">
+          <img src="./instructor.jpeg" alt="Foto do instrutor" class="instructor-photo" />
+        </div>
+      </section>
+
+      <section class="world-section">
+        <h2>Prepare-se para uma carreira sem fronteiras.</h2>
+      </section>
 
       <!-- CONTEÚDO + FORM -->
       <div class="layout">
         <!-- COLUNA ESQUERDA -->
         <div>
           <section id="sobre">
-            <h3>O que é o HablaTech Software Fellowship?</h3>
+            <h3>O que é o HableTech Software Fellowship?</h3>
             <p class="section-subtitle">
               Um ambiente seguro para aprender, errar, crescer e construir
               projetos que realmente contam na sua trajetória profissional.
@@ -630,4 +751,3 @@
   </script>
 </body>
 </html>
-
